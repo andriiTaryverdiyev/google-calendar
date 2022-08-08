@@ -1,0 +1,140 @@
+.page {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.button {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.icon-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__content {
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(204, 204, 204, 0.2705882353);
+  z-index: 10;
+}
+
+.popup__content {
+  position: absolute;
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  padding-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  position: relative;
+  top: 0px;
+}
+
+.navigation {
+  margin-left: 10px;
+}
+
+.calendar {
+  overflow: auto;
+}
+.calendar__header {
+  padding-left: 30px;
+  display: flex;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+}
+.calendar__week-container {
+  display: flex;
+}
+.calendar__time-scale {
+  margin-top: 100px;
+}
+.calendar__week {
+  margin-top: 100px;
+}
+.calendar__time-slot {
+  height: 60px;
+  width: 120px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: rgba(128, 128, 128, 0.3019607843);
+}
+
+.calendar__day-label {
+  height: 100px;
+  width: 120px;
+}
+
+.day-label__day-name {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  color: darkgray;
+  font-size: 22px;
+}
+
+.day-label__day-number {
+  margin-top: 10px;
+  display: block;
+  color: darkgray;
+  text-align: center;
+  font-size: 25px;
+}
+
+.time-slot {
+  height: 60px;
+  width: 50px;
+  text-align: center;
+}
+.time-slot__time {
+  position: relative;
+  top: -10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */
