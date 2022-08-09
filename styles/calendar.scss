@@ -1,10 +1,15 @@
 // стили сетки календаря и заголовка календаря с днями недели
 .header {
     padding-top: 10px;
-    margin-left: 20px;
+    margin-left: 50px;
     display: flex;
     position: relative;
     top: 0px;
+    width: 100vw;
+}
+
+.create-event-btn {
+    margin-right: 50px;
 }
 
 .navigation {
@@ -14,20 +19,22 @@
 .calendar {
     overflow: auto;
     &__header {
-        padding-left: 30px;
+        padding-left: 50px;
         display: flex;
         position: absolute;
-        top: 60px;
+        top: 50px;
         z-index: 1;
+        background-color: white;
     }
     &__week-container {
         display: flex;
+        margin-top: 10px;
     }
     &__time-scale {
         margin-top: 100px;
     }
-    &__body {}
     &__week {
+        display: flex;
         margin-top: 100px;
     }
     &__time-slot {
@@ -53,7 +60,7 @@
 }
 
 .day-label__day-number {
-    margin-top: 10px;
+    padding-top: 10px;
     display: block;
     color: darkgray;
     text-align: center;
@@ -68,4 +75,9 @@
         position: relative;
         top: -10px;
     }
+}
+
+.active {
+    background-color: green;
+    color: red;
 }

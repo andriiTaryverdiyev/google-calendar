@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  align-items: center;
 }
 
 .button {
@@ -60,10 +61,15 @@
 
 .header {
   padding-top: 10px;
-  margin-left: 20px;
+  margin-left: 50px;
   display: flex;
   position: relative;
   top: 0px;
+  width: 100vw;
+}
+
+.create-event-btn {
+  margin-right: 50px;
 }
 
 .navigation {
@@ -74,19 +80,22 @@
   overflow: auto;
 }
 .calendar__header {
-  padding-left: 30px;
+  padding-left: 50px;
   display: flex;
   position: absolute;
-  top: 60px;
+  top: 50px;
   z-index: 1;
+  background-color: white;
 }
 .calendar__week-container {
   display: flex;
+  margin-top: 10px;
 }
 .calendar__time-scale {
   margin-top: 100px;
 }
 .calendar__week {
+  display: flex;
   margin-top: 100px;
 }
 .calendar__time-slot {
@@ -111,7 +120,7 @@
 }
 
 .day-label__day-number {
-  margin-top: 10px;
+  padding-top: 10px;
   display: block;
   color: darkgray;
   text-align: center;
@@ -126,6 +135,11 @@
 .time-slot__time {
   position: relative;
   top: -10px;
+}
+
+.active {
+  background-color: green;
+  color: red;
 }
 
 * {
