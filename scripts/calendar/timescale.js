@@ -10,7 +10,7 @@ export const renderTimescale = () => {
     for (let i = 0; i < array.length; i++) {
         container.innerHTML += `
         <div class ="time-slot">
-      <span class ="time-slot__time">${array[i]}</span>
+      <span class ="time-slot__time">${array[i]}:00</span>
       </div>
       `
     }
