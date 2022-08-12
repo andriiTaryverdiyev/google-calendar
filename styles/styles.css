@@ -61,7 +61,7 @@
 
 .header {
   padding-top: 10px;
-  margin-left: 50px;
+  margin-left: 200px;
   display: flex;
   position: relative;
   top: 0px;
@@ -109,6 +109,8 @@
 .calendar__day-label {
   height: 100px;
   width: 120px;
+  display: flex;
+  flex-direction: column;
 }
 
 .day-label__day-name {
@@ -116,15 +118,25 @@
   display: block;
   text-align: center;
   color: darkgray;
-  font-size: 22px;
+  font-size: 15px;
+}
+.day-label__day-name.active {
+  color: cornflowerblue;
 }
 
 .day-label__day-number {
-  padding-top: 10px;
+  border-radius: 100%;
+  margin: auto;
+  width: 40px;
+  padding: 5px;
   display: block;
   color: darkgray;
   text-align: center;
   font-size: 25px;
+}
+.day-label__day-number.active {
+  color: white;
+  background-color: cornflowerblue;
 }
 
 .time-slot {
@@ -137,9 +149,14 @@
   top: -10px;
 }
 
-.active {
-  background-color: green;
-  color: red;
+.event {
+  background-color: cornflowerblue;
+  padding: 10px;
+  border-radius: 5%;
+  width: 90%;
+}
+.event:hover {
+  cursor: pointer;
 }
 
 * {

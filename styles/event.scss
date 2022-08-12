@@ -1,1 +1,10 @@
 // стили отображаемого в календаре события
+.event {
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: 5%;
+    width: 90%;
+    &:hover {
+        cursor: pointer;
+    }
+}
