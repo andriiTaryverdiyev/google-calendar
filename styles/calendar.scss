@@ -21,7 +21,10 @@
 }
 
 .navigation {
-    margin-left: 10px;
+    &__today-btn {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
 }
 
 .calendar {

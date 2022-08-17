@@ -20,6 +20,7 @@ export const generateWeekRange = (startDate) => {
         const base = new Date(startDate);
         result.push(new Date(base.setDate(base.getDate() + i)));
     }
+
     return result;
 };
 

@@ -2,6 +2,8 @@ import { getItem } from '../common/storage.js';
 import { generateWeekRange } from '../common/time.utils.js';
 import { renderEvents } from '../events/events.js';
 import { createNumbersArray } from '../common/createNumbersArray.js';
+//document.addEventListener('DOMContentLoaded', ts)
+
 
 const generateDay = () => {
     // функция должна сгенерировать и вернуть разметку дня в виде строки
@@ -29,8 +31,34 @@ export const renderWeek = () => {
     calendarWeekElem.innerHTML = '';
 
     weekRange.map((day) => {
-        calendarWeekElem.innerHTML += `<div class="calendar__day" data-day="${day.getDate()}" >${generateDay()}</div>`;
+        calendarWeekElem.innerHTML += `<div class="calendar__day" style="position: relative;" data-day="${day.getDate()}" >${generateDay()}</div>`;
+
     });
 
     renderEvents();
+    timeline()
 };
+
+
+function timeline() {
+    let currentDay = new Date()
+    let h = currentDay.getHours()
+    let m = currentDay.getMinutes()
+    const day = document.querySelectorAll('.calendar__day')
+    day.forEach((e) => {
+        if (e.dataset.day == currentDay.getDate()) {
+            if (e.children.length > 24) {
+                e.lastChild.remove();
+                e.lastChild.remove()
+            }
+            e.innerHTML += `<span class='line_colomn' style="top:${(h*60)+m-5}px" title="${ h }:${ m }"></span><span class='line' style="top:${(h*60)+m-1}px"></span>`
+        }
+
+
+    })
+
+}
+
+
+
+setInterval(timeline, 60000);
